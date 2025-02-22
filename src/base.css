@@ -88,10 +88,36 @@ input:focus {
 }
 
 .container {
+  padding: 0 20px;
+  width: 320px;
+  max-width: 375px;
+}
+
+.section {
+  padding: 20px;
+  margin: 0 auto;
   display: flex;
-  place-items: center;
-  justify-content: center;
   flex-direction: column;
-  width: 100vw;
-  padding: 0 64px;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 768px){
+  .section {
+      padding: 32px;
+    }
+  
+    .container {
+      padding: 0 64px;
+      width: 704px;
+    }
+}
+@media screen and (min-width: 1440px) {
+  .section {
+      flex-direction: row;
+    }
+  .container {
+    width: 600px;
+  }
 }
